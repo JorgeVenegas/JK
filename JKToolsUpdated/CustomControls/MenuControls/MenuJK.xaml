@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="JKToolsUpdated.CustomControls.MenuControls.MenuJK"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JKToolsUpdated.CustomControls.MenuControls"
+             mc:Ignorable="d" 
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid>
+        <Border x:Name="border" CornerRadius="10" Background="#FFEEEEEE">
+            <Grid Margin="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Título segmento" Grid.Row="0"  FontFamily="Heavitas" FontSize="22" Margin="0, 2, 0, 10" VerticalAlignment="Center" Foreground="#FF1C2541"/>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <local:MainMenuItem Grid.Row="0" Loaded="MainMenuItem_Loaded"/>
+                    <local:MainMenuItem Grid.Row="1" Loaded="MainMenuItem_Loaded" />
+                    <local:MainMenuItem Grid.Row="2" Loaded="MainMenuItem_Loaded" />
+                </Grid>
+                <TextBlock Text="Sistema JK" Foreground="#1C2541" FontFamily="Heavitas" Grid.Row="2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
