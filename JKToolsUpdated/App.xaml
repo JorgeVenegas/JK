@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:JKToolsUpdated"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <ControlTemplate TargetType="Button" x:Key="JKButton">
             <Border x:Name="ButtonBorder" CornerRadius="14, 14, 14, 0" BorderBrush="Transparent" Background="#FF39a9db" Cursor="Hand">
                 <Grid>

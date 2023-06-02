@@ -25,3 +25,6 @@ C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomCon
 C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\MenuControls\MenuJK.baml
 C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\Footer.g.cs
 C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\Footer.baml
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\JKToolsUpdated_Content.g.cs
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\MenuControls\SubMainMenuItem.g.cs
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\MenuControls\SubMainMenuItem.baml

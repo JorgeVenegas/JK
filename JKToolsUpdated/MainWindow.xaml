@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStyle="SingleBorderWindow"
         Icon="/Resources/JK.ico"
-        Title="Ssitema JK" Height="1080" Width="1920">
+        Title="Sistema JK" Height="1080" Width="1920">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -28,7 +28,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <!-- Main Menu -->
-            <MenuControls:MenuJK Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="12" Loaded="MenuJK_Loaded"/>
+            <MenuControls:MenuJK x:Name="MenuJK" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="12" Loaded="MenuJK_Loaded"/>
             <!-- Center Info -->
             
             <Grid ShowGridLines="False" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="12">
@@ -52,7 +52,7 @@
                 </Viewbox>
             </Grid>
             <!-- Left Segments -->    
-            <CustomControls:SegmentCard Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+            <CustomControls:SegmentCard  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
             <CustomControls:SegmentCard Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
             <CustomControls:SegmentCard Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
             <!-- Bottom Segments -->

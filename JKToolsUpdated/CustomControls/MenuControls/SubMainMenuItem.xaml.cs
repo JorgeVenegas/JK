@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -17,10 +16,11 @@ using System.Windows.Shapes;
 namespace JKToolsUpdated.CustomControls.MenuControls
 {
     /// <summary>
-    /// Lógica de interacción para MainMenuItem.xaml
+    /// Lógica de interacción para SubMainMenuItem.xaml
     /// </summary>
-    public partial class MainMenuItem : UserControl
+    public partial class SubMainMenuItem : UserControl
     {
+
         private string title;
 
         public string Title
@@ -46,28 +46,22 @@ namespace JKToolsUpdated.CustomControls.MenuControls
             set { showArrow = value; }
         }
 
-        private int numberOfSubItems;
+        private int numberOfSubSubItems;
 
-        public int NumberOfSubItems
+        public int NumberOfSubSubItems
         {
-            get { return numberOfSubItems; }
-            set { numberOfSubItems = value; }
+            get { return numberOfSubSubItems; }
+            set { numberOfSubSubItems = value; }
         }
 
-        public MainMenuItem()
+        public SubMainMenuItem()
         {
             DataContext = this;
             isOpen = true;
             InitializeComponent();
             MainMenuSubButtonBorder.Visibility = Visibility.Hidden;
-            MainMenuSubButtonBorder.Height = 0; 
+            MainMenuSubButtonBorder.Height = 0;
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hola");
-        }
-
 
         private void MenuMainButton_Click(object sender, RoutedEventArgs e)
         {
@@ -82,11 +76,6 @@ namespace JKToolsUpdated.CustomControls.MenuControls
                 MainMenuSubButtonBorder.Visibility = Visibility.Visible;
                 MainMenuSubButtonBorder.Height = Double.NaN;
             }
-        }
-
-        private void SubMainMenuItem_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

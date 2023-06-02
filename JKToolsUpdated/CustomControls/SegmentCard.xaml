@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JKToolsUpdated.CustomControls"
              mc:Ignorable="d" 
+             Name="SegmentCardd"
              HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <Grid>
-        <Border x:Name="border" CornerRadius="10" Background="#FFEEEEEE" MinWidth="250">
+        <Border x:Name="border" CornerRadius="10" Background="#FFEEEEEE" MinWidth="150">
             <Grid Margin="12">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -18,8 +19,8 @@
                         <ColumnDefinition Width="8*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
-                    <Viewbox  Grid.Column="0" Stretch="None" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBlock Text="{Binding Title}" FontFamily="Heavitas" FontSize="22" Margin="0, 2, 16, 0" VerticalAlignment="Center" Foreground="#FF1C2541"/>
+                    <Viewbox  Grid.Column="0" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                        <TextBlock Text="{Binding Title, ElementName=SegmentCardd}" FontFamily="Heavitas" FontSize="22" Margin="0, 2, 16, 0" VerticalAlignment="Center" Foreground="#FF1C2541"/>
                     </Viewbox>
                     <Button x:Name="more" Template="{StaticResource JKButton}" Foreground="White" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" FontFamily="Heavitas" FontSize="20" Click="more_Click">+</Button>
                 </Grid>

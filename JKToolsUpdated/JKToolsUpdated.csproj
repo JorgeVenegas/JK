@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControls\MenuControls\SubMainMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\SegmentCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +91,9 @@
     </Compile>
     <Compile Include="CustomControls\MenuControls\MenuJK.xaml.cs">
       <DependentUpon>MenuJK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\MenuControls\SubMainMenuItem.xaml.cs">
+      <DependentUpon>SubMainMenuItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\SegmentCard.xaml.cs">
       <DependentUpon>SegmentCard.xaml</DependentUpon>
@@ -129,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\jk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

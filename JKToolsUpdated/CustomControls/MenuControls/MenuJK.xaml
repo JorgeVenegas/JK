@@ -16,16 +16,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Título segmento" Grid.Row="0"  FontFamily="Heavitas" FontSize="22" Margin="0, 2, 0, 10" VerticalAlignment="Center" Foreground="#FF1C2541"/>
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+                <UniformGrid x:Name="MenuItemsGrid" Grid.Row="1" Rows="{Binding NumberOfMainItems}" Columns="1">
                     <local:MainMenuItem Grid.Row="0" Loaded="MainMenuItem_Loaded"/>
-                    <local:MainMenuItem Grid.Row="1" Loaded="MainMenuItem_Loaded" />
-                    <local:MainMenuItem Grid.Row="2" Loaded="MainMenuItem_Loaded" />
-                </Grid>
+                </UniformGrid>
                 <TextBlock Text="Sistema JK" Foreground="#1C2541" FontFamily="Heavitas" Grid.Row="2"/>
             </Grid>
         </Border>

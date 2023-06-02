@@ -22,7 +22,7 @@ namespace JKToolsUpdated.CustomControls
     {
 
         public static readonly DependencyProperty TitleProperty =
-        DependencyProperty.Register("SudokuSize", typeof(int), typeof(SegmentCard), new FrameworkPropertyMetadata(null));
+        DependencyProperty.Register("Title", typeof(string), typeof(SegmentCard), new FrameworkPropertyMetadata(null));
         private string Title
         {
             get { return (string)GetValue(TitleProperty); }
@@ -30,6 +30,12 @@ namespace JKToolsUpdated.CustomControls
         }
         public SegmentCard()
         {
+            Title = "Hola";
+            InitializeComponent();
+        }        
+        public SegmentCard(string title)
+        {
+            Title = title;
             InitializeComponent();
         }
 
