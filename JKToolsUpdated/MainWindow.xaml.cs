@@ -21,7 +21,9 @@ namespace JKToolsUpdated
     /// </summary>
     public partial class MainWindow : Window
     {
+            // Main Data
 
+            
             // Menu 
             Dictionary<string, object> menuItems = new Dictionary<string, object>()
             {
@@ -78,6 +80,7 @@ namespace JKToolsUpdated
         public MainWindow()
         {
             InitializeComponent();
+            MenuJK.MenuItems = menuItems;
         }
 
         private void SegmentCard_Loaded(object sender, RoutedEventArgs e)
@@ -87,7 +90,6 @@ namespace JKToolsUpdated
 
         private void MenuJK_Loaded(object sender, RoutedEventArgs e)
         {
-            MenuJK.MenuItems = menuItems;
         }
     }
 }

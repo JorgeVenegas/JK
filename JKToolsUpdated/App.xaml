@@ -2,9 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:JKToolsUpdated"
+             x:Name="App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <ControlTemplate TargetType="Button" x:Key="JKButton">
             <Border x:Name="ButtonBorder" CornerRadius="14, 14, 14, 0" BorderBrush="Transparent" Background="#FF39a9db" Cursor="Hand">
                 <Grid>

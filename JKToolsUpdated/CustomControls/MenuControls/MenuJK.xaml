@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JKToolsUpdated.CustomControls.MenuControls"
              mc:Ignorable="d" 
+             Name="Menu"
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <Grid>
         <Border x:Name="border" CornerRadius="10" Background="#FFEEEEEE">
@@ -15,10 +16,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Título segmento" Grid.Row="0"  FontFamily="Heavitas" FontSize="22" Margin="0, 2, 0, 10" VerticalAlignment="Center" Foreground="#FF1C2541"/>
-                <UniformGrid x:Name="MenuItemsGrid" Grid.Row="1" Rows="{Binding NumberOfMainItems}" Columns="1">
-                    <local:MainMenuItem Grid.Row="0" Loaded="MainMenuItem_Loaded"/>
-                </UniformGrid>
+                <TextBlock Text="Menú Principal" Grid.Row="0"  FontFamily="Heavitas" FontSize="22" Margin="0, 2, 0, 10" VerticalAlignment="Center" Foreground="#FF1C2541"/>
+                <StackPanel x:Name="MenuItemsGrid" Grid.Row="1" Orientation="Vertical">
+                </StackPanel>
                 <TextBlock Text="Sistema JK" Foreground="#1C2541" FontFamily="Heavitas" Grid.Row="2"/>
             </Grid>
         </Border>

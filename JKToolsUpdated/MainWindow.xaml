@@ -30,7 +30,7 @@
             <!-- Main Menu -->
             <MenuControls:MenuJK x:Name="MenuJK" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="12" Loaded="MenuJK_Loaded"/>
             <!-- Center Info -->
-            
+
             <Grid ShowGridLines="False" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="12">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -51,10 +51,12 @@
                     <TextBlock Text="Primavera" FontFamily="Heavitas" FontSize="160" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0, -22" Foreground="#FF39a9db"/>
                 </Viewbox>
             </Grid>
-            <!-- Left Segments -->    
-            <CustomControls:SegmentCard  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
-            <CustomControls:SegmentCard Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
-            <CustomControls:SegmentCard Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+            <!-- Right Segments -->
+            <StackPanel x:Name="RightSegmentsGrid" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Orientation="Vertical" VerticalAlignment="Stretch">
+                <CustomControls:SegmentCard  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+                <CustomControls:SegmentCard Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+                <CustomControls:SegmentCard Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+            </StackPanel>
             <!-- Bottom Segments -->
             <CustomControls:SegmentCard Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
             <CustomControls:SegmentCard Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>

@@ -26,7 +26,11 @@ namespace JKToolsUpdated.CustomControls.MenuControls
         public Dictionary<string, object> MenuItems
         {
             get { return menuItems; }
-            set { menuItems = value; }
+            set
+            {
+                menuItems = value;
+                CreateMenu();
+            }
         }
 
         private int numberOfMainItems;
@@ -42,6 +46,10 @@ namespace JKToolsUpdated.CustomControls.MenuControls
         {
             DataContext = this;
             InitializeComponent();
+        }
+
+        private void CreateMenu()
+        {
             if (menuItems != null)
             {
                 numberOfMainItems = menuItems.Count;
@@ -49,46 +57,9 @@ namespace JKToolsUpdated.CustomControls.MenuControls
                 {
                     MainMenuItem menuItem_i = new MainMenuItem();
                     menuItem_i.Title = item.Key;
-                    FillMenuMain(menuItem_i, item.Value);
+                    menuItem_i.Subitems = item.Value as Dictionary<string, object>;
                     MenuItemsGrid.Children.Add(menuItem_i);
                 };
-            }
-        }
-
-        private void FillMenuMain(MainMenuItem menuItem_i, object subitems_obj)
-        {
-            if (subitems_obj != null)
-            {
-                Dictionary<string, object> subitems = subitems_obj as Dictionary<string, object>;
-                foreach (var subitem in subitems)
-                {
-                    SubMainMenuItem menuItem_j = new SubMainMenuItem();
-                    menuItem_j.Title = subitem.Key;
-                    FillMenuMainSub(menuItem_j, subitem.Value);
-                    menuItem_j.NumberOfSubSubItems = subitems.Count;
-                }
-            }
-            else
-            {
-                menuItem_i.ShowArrow = false;
-            }
-        }
-        private void FillMenuMainSub(SubMainMenuItem subMenuItem_i, object subitems_obj)
-        {
-            if (subitems_obj != null)
-            {
-                Dictionary<string, object> subitems = subitems_obj as Dictionary<string, object>;
-                foreach (var subitem in subitems)
-                {
-                    SubMainMenuItem menuItem_j = new SubMainMenuItem();
-                    menuItem_j.Title = subitem.Key;
-                    FillMenuMainSub(menuItem_j, subitem.Value);
-                    menuItem_j.NumberOfSubSubItems = subitems.Count;
-                }
-            }
-            else
-            {
-                subMenuItem_i.ShowArrow = false;
             }
         }
 

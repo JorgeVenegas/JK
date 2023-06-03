@@ -5,8 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JKToolsUpdated.CustomControls.MenuControls"
              mc:Ignorable="d" 
+             Name="MenuItem"
              HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <!--Icons-->
         <DrawingImage x:Key="ArrowGreen">
             <DrawingImage.Drawing>
@@ -65,16 +67,17 @@
                     </Grid.ColumnDefinitions>
                     <Image Source="{StaticResource HomeIcon}" Grid.Column="0" Height="28" Width="28" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
                     <Rectangle Height="17" Width="1.5" Margin="10" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="#FF0F93C3" />
-                    <TextBlock Text="{Binding Title}" Grid.Column="2"  FontFamily="Heavitas" FontSize="18" Margin="0, 2, 10, 0" VerticalAlignment="Center" Foreground="#FF1C2541"/>
-                    <Image x:Name="Arrow" Source="{StaticResource ArrowGreen}" Grid.Column="3" Height="16" Width="16" RenderOptions.BitmapScalingMode="NearestNeighbor" Margin="-5, 0, 0, 0" Visibility="{Binding ShowArrow, Converter={StaticResource BoolToVis}}"/>
+                    <TextBlock Text="{Binding Title, ElementName=MenuItem}" Grid.Column="2"  FontFamily="Heavitas" FontSize="18" Margin="0, 2, 10, 0" VerticalAlignment="Center" Foreground="#FF1C2541"/>
+                    <Image x:Name="Arrow" Source="{StaticResource ArrowGreen}" Grid.Column="3" Height="16" Width="16" RenderOptions.BitmapScalingMode="NearestNeighbor" Margin="-5, 0, 0, 0" Visibility="{Binding Path=ShowArrow, Converter={StaticResource BoolToVis}, ElementName=MenuItem}"/>
                 </Grid>
             </Button>
         </Grid>
-        <Border x:Name="MainMenuSubButtonBorder" Panel.ZIndex="-1" CornerRadius="10" Background="#FFFCFCFC" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0" Height="Auto" Cursor="Hand"  Padding="6, 56, 6, 0">
-            <UniformGrid x:Name="MenuSubItemsGrid" Rows="{Binding NumberOfSubItems}" Columns="1" HorizontalAlignment="Stretch">
-                <local:SubMainMenuItem HorizontalAlignment="Stretch" Loaded="SubMainMenuItem_Loaded"/>
-                <local:SubMainMenuItem HorizontalAlignment="Stretch" Loaded="SubMainMenuItem_Loaded"/>
-            </UniformGrid>
+        <Border x:Name="MainMenuSubButtonBorder" Panel.ZIndex="-1" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0" Height="Auto" Cursor="Hand"  Padding="6, 56, 6, 0">
+            <Border.Background>
+                <SolidColorBrush Color="#F1F1F1" Opacity=".75" />
+            </Border.Background>
+            <StackPanel x:Name="MenuSubItemsGrid" Orientation="Vertical" HorizontalAlignment="Stretch">
+            </StackPanel>
         </Border>
     </Grid>
 </UserControl>
