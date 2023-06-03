@@ -58,3 +58,7 @@ C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\obj\Debug\JKToolsUpdated.csproj.Ge
 C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\obj\Debug\JKToolsUpdated.csproj.CoreCompileInputs.cache
 C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\obj\Debug\JKToolsUpdated.exe
 C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\obj\Debug\JKToolsUpdated.pdb
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\TopBarInfo.g.cs
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\TopBarInfo.baml
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\DataGridJK.g.cs
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\CustomControls\DataGridJK.baml

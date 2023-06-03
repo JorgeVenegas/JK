@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JKToolsUpdated.CustomControls"
              mc:Ignorable="d" 
+             Name="Foot"
              HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <UserControl.Resources>
         <Style x:Key="LabelBold" TargetType="TextBlock">
@@ -32,9 +33,16 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock Text="Temporada:" Grid.Column="0" Style="{StaticResource LabelLight}"/>
-            <TextBlock Text="Nombre de Temprorada" Grid.Column="1" Style="{StaticResource LabelBold}"/>
+            <TextBlock Grid.Column="1" Style="{StaticResource LabelBold}">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0} {1}">
+                        <Binding Path="Season"  ElementName="Foot"/>
+                        <Binding Path="Year" ElementName="Foot" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
             <TextBlock Text="Usuario:" Grid.Column="3" Style="{StaticResource LabelLight}"/>
-            <TextBlock Text="Nombre de Usiario" Grid.Column="4" Style="{StaticResource LabelBold}"/>
+            <TextBlock Text="{Binding UserName, ElementName=Foot}" Grid.Column="4" Style="{StaticResource LabelBold}"/>
             <TextBlock Text="Versión:" Grid.Column="6" Style="{StaticResource LabelLight}"/>
             <TextBlock Text=".:1.0.0.0:." Grid.Column="7" Style="{StaticResource LabelBold}"/>
         </Grid>

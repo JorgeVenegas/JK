@@ -15,7 +15,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Margin="0, 20" Grid.Row="0">
+        <Grid Margin="12" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -29,37 +29,13 @@
             </Grid.RowDefinitions>
             <!-- Main Menu -->
             <MenuControls:MenuJK x:Name="MenuJK" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="12" Loaded="MenuJK_Loaded"/>
+            <!--Top Bar Info-->
+            <CustomControls:TopBarInfo Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="12"/>
             <!-- Center Info -->
-
-            <Grid ShowGridLines="False" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="12">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="Bienvenido" FontFamily="Heavitas" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0" Foreground="#FF39a9db"/>
-                <TextBlock Grid.Column="1" Grid.Row="1" Text="Jorge Venegas" FontFamily="Montserrat" FontWeight="Light" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Foreground="#FF1C2541"/>
-                <TextBlock Grid.Column="1" Grid.Row="2" Text="2023" FontFamily="Heavitas" FontSize="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0, -21" Foreground="#FF1C2541"/>
-                <Viewbox Grid.Column="1" Grid.Row="3" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TextBlock Text="Primavera" FontFamily="Heavitas" FontSize="160" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0, -22" Foreground="#FF39a9db"/>
-                </Viewbox>
-            </Grid>
             <!-- Right Segments -->
-            <StackPanel x:Name="RightSegmentsGrid" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Orientation="Vertical" VerticalAlignment="Stretch">
-                <CustomControls:SegmentCard  Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
-                <CustomControls:SegmentCard Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
-                <CustomControls:SegmentCard Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
+            <StackPanel x:Name="RightSegmentsPanel" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Orientation="Vertical" VerticalAlignment="Stretch">
             </StackPanel>
             <!-- Bottom Segments -->
-            <CustomControls:SegmentCard Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
-            <CustomControls:SegmentCard Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12" Loaded="SegmentCard_Loaded"/>
         </Grid>
         <!--Footer-->
         <CustomControls:Footer Grid.Row="1"/>

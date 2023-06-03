@@ -16,9 +16,12 @@ using System.Windows.Shapes;
 namespace JKToolsUpdated.CustomControls
 {
     /// <summary>
-    /// Lógica de interacción para Footer.xaml
+    /// Lógica de interacción para TopBarInfo.xaml
     /// </summary>
-    public partial class Footer : UserControl
+    /// 
+
+
+    public partial class TopBarInfo : UserControl
     {
 
         private string userName;
@@ -28,7 +31,7 @@ namespace JKToolsUpdated.CustomControls
             get { return userName; }
             set { userName = value; }
         }
-
+        
         private string season;
 
         public string Season
@@ -45,7 +48,8 @@ namespace JKToolsUpdated.CustomControls
             set { year = value; }
         }
 
-        public Footer()
+
+        public TopBarInfo()
         {
             UserName = "Jorge";
             Season = "Primavera";

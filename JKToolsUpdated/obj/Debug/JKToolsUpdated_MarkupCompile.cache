@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\obj\Debug\
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\obj\Debug\
 JKToolsUpdated
 none
 false
 DEBUG;TRACE
-C:\Users\veljo\Source\Repos\JK\JKToolsUpdated\App.xaml
-7-166808194
+C:\Users\jorgeevl\source\repos\JKToolsUpdated\JKToolsUpdated\App.xaml
+9-949437223
 1-600760770
-11145942882
+13-133750213
 13-1310406943
-CustomControls\Footer.xaml;CustomControls\MenuControls\MainMenuItem.xaml;CustomControls\MenuControls\MenuJK.xaml;CustomControls\MenuControls\SubMainMenuItem.xaml;CustomControls\SegmentCard.xaml;MainWindow.xaml;Themes\Generic.xaml;
+CustomControls\DataGridJK.xaml;CustomControls\Footer.xaml;CustomControls\MenuControls\MainMenuItem.xaml;CustomControls\MenuControls\MenuJK.xaml;CustomControls\MenuControls\SubMainMenuItem.xaml;CustomControls\SegmentCard.xaml;CustomControls\TopBarInfo.xaml;MainWindow.xaml;Themes\Generic.xaml;
 
 False
 

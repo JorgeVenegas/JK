@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,30 +20,35 @@ namespace JKToolsUpdated.CustomControls
     /// <summary>
     /// Lógica de interacción para SegmentCard.xaml
     /// </summary>
-    public partial class SegmentCard : UserControl
+    public partial class SegmentCard : UserControl, INotifyPropertyChanged
     {
 
-        public static readonly DependencyProperty TitleProperty =
-        DependencyProperty.Register("Title", typeof(string), typeof(SegmentCard), new FrameworkPropertyMetadata(null));
-        private string Title
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private string title;
+
+        public string Title
         {
-            get { return (string)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
+            get { return title; }
+            set
+            {
+                title = value;
+                OnPropertyChanged(nameof(Title));
+            }
         }
+
         public SegmentCard()
         {
-            Title = "Hola";
-            InitializeComponent();
-        }        
-        public SegmentCard(string title)
-        {
-            Title = title;
             InitializeComponent();
         }
 
         private void more_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hola");
+            MessageBox.Show($"Going to {Title}");
+        }
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }
